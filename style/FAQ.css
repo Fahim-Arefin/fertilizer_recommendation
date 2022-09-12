@@ -1,0 +1,28 @@
+#horizontalImage{
+    width: 100%;
+    height: 400px;
+    background-image: url(../asset/image/7.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+#horizontalImage h1{
+    color: white;
+    font-size: 40px;
+    margin-left: 20%;
+}
+#info{
+    font-size: 25px;
+}
+#tabBar{
+    width: 60%;
+    height: 70px;
+    background-color: #4eae3a;
+    border-radius: 5px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
