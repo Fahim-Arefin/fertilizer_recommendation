@@ -26,3 +26,62 @@
     align-items: center;
     padding-left: 12px;
 }
+#contactDetails{
+    width: 60%;
+    margin: 4em auto;
+}
+#contactDetails h2{
+    color: #4E3914;
+}
+abbr{
+    font-weight: bolder;
+    font-size: 20px;
+}
+#formSection{
+    color: #4E3914;
+    width: 60%;
+    margin: 4em auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+label{
+    
+    display: block;
+}
+input{
+    margin-top: .6em;
+    margin-bottom: 2em;
+    width: 575px;
+    height: 1.6em;
+    padding: 6px 12px;
+    font-size: 1em;
+}
+textarea{
+    font-size: 1.2rem;
+    margin-top: .6em;
+    margin-bottom: 2em;
+    width: 575px;
+    padding: 6px 12px;
+}
+button{
+    width: 13%;
+    height: 3.2em;
+    padding: 6px 8px;
+    text-decoration: none;
+    border: none;
+    background-color: #4eae3a;
+    border-radius: 4.8px;
+    color: white;
+    transition: background-color .3s ease;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #3e912e;
+}
+button:active{
+    background-color: #246018;
+}
+

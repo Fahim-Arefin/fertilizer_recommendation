@@ -15,6 +15,9 @@ session_start();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;800;900&family=Poppins&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style/homePage.css">
     <!-- <link rel="stylesheet" href="style/homePage2.css"> -->
@@ -34,7 +37,15 @@ session_start();
     ?>
 
     <section id="backImage">
-
+        <h1>
+            <?php
+            if (!empty($_SESSION["username"])) {
+                $user = $_SESSION["username"];
+            ?>
+            Welcome <?php echo $user;
+            }
+            ?>
+        </h1>
     </section>
 
 
