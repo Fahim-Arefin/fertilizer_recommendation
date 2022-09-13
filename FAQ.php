@@ -39,7 +39,7 @@ session_start();
     <section id="FAQ">
         <div>
             <h2>Why should you use recommended fertilizer for your crops?</h2>
-            <p class="active">
+            <p class="activeAns">
 
 
 
@@ -55,7 +55,7 @@ session_start();
         </div>
         <div>
             <h2>a What are the outcome of a soil test?</h2>
-            <p class="active">
+            <p class="activeAns">
 
 
                 The owner of the land will get to know how much of Nitrogen-Phosphorous-Potassium is present in the soil. Moreover, the
@@ -68,7 +68,7 @@ session_start();
         </div>
         <div>
             <h2>How is technology involved in recommending fertilizers?</h2>
-            <p class="active">
+            <p class="activeAns">
 
 
                 To recommend a fertiliser we need two things. First, the soil test data and the parameters of the soil(such as N, P, K,
@@ -81,7 +81,7 @@ session_start();
         </div>
         <div>
             <h2>How farmers be benefited from this website?</h2>
-            <p class="active">
+            <p class="activeAns">
 
 
 
@@ -97,7 +97,7 @@ session_start();
         </div>
         <div>
             <h2>Who can use this service?</h2>
-            <p class="active">
+            <p class="activeAns">
 
                 Since it is free of cost it can be used by anyone who is able to use search engines.
 
@@ -108,6 +108,8 @@ session_start();
 
 
     <?php include('footer.html') ?>
+   
+
     <script src="js/navbarColor.js"></script>
     <script src="js/FAQ.js"></script>
 

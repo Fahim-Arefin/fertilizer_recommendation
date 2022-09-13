@@ -4,10 +4,10 @@ for (let question of h2) {
     question.addEventListener('click', () => {
         // console.log(question.nextElementSibling)
         let p = question.nextElementSibling
-        if(p.getAttribute('class')!=='active'){
-            p.classList.add('active')
+        if(p.getAttribute('class')!=='activeAns'){
+            p.classList.add('activeAns')
         }else{
-            p.classList.remove('active')
+            p.classList.remove('activeAns')
         }
     })
 }
