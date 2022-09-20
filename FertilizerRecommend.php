@@ -1,6 +1,17 @@
 <?php
 // Start the session
 session_start();
+include_once "dbconnection.php";
+$sql = "SELECT SoilType 
+        FROM fertilizer_prediction 
+        GROUP BY SoilType;";
+
+$result = $conn->query($sql);
+
+$sql = "SELECT CropType 
+        FROM fertilizer_prediction 
+        GROUP BY CropType;";
+$result2 = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,8 +49,47 @@ session_start();
 
     <h1 id="heading">Please Fill The Form Below</h1>
 
-    <form action="">
+    <form action="processFertilizerRecommendation.php" method="POST">
+        <label for="temperature">Temperature:</label>
+        <input type="text" name="temperature" id="temperature" required>
 
+        <label for="humidity">Humidity:</label>
+        <input type="text" name="humidity" id="humidity" required>
+
+        <label for="moisture">Moisture:</label>
+        <input type="text" name="moisture" id="moisture" required>
+
+        <label for="soilType">Soil Type:</label>
+        <select name="soilType" id="soilType">
+            <?php
+            if ($result->num_rows > 0) {
+                while ($rows = $result->fetch_assoc()) {
+            ?>
+                    <option value="<?php echo $rows['SoilType'] ?>"><?php echo $rows['SoilType'] ?></option>
+            <?php
+                }
+            } else {
+                echo "No data found";
+            }
+            ?>
+        </select>
+
+        <label for="cropType">Crop Type:</label>
+        <select name="cropType" id="cropType">
+            <?php
+            if ($result2->num_rows > 0) {
+                while ($rows = $result2->fetch_assoc()) {
+            ?>
+                    <option value="<?php echo $rows['CropType'] ?>"><?php echo $rows['CropType'] ?></option>
+            <?php
+                }
+            } else {
+                echo "No data found";
+            }
+            ?>
+        </select>
+
+        <button>Search</button>
     </form>
 
     <?php include('footer.html') ?>

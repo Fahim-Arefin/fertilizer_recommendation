@@ -24,8 +24,8 @@ if (!preg_match("/(^(\+8801|8801|01|008801))[1|3-9]{1}(\d){8}$/", $phoneNumber))
     $phoneNumberFlag = true;
 }
 
-if ($emailAddressFlag) {
-    if ($phoneNumberFlag) {
+if ($phoneNumberFlag) {
+    if ($emailAddressFlag) {
 
         include_once "dbconnection.php";
         $sql = "INSERT INTO message (fullname,phoneNumber,email,message)
@@ -41,19 +41,17 @@ if ($emailAddressFlag) {
                 window.location.assign('contactSuccess.php')
             </script>
 
-<?php
+        <?php
 
         } else {
             //echo "Error: " . $sql . "<br>" . $conn->error;
             echo "<br>query not ececute for some reason";
         }
-
-
     } else {
-        echo $phoneNumberError;
+        echo $emailAddressFlagError;
     }
 } else {
-    echo $emailAddressFlagError;
+    echo $phoneNumberError;
 }
 
 ?>
