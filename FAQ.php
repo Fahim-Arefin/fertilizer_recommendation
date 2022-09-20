@@ -54,7 +54,7 @@ session_start();
             </p>
         </div>
         <div>
-            <h2>a What are the outcome of a soil test?</h2>
+            <h2>What are the outcome of a soil test?</h2>
             <p class="activeAns">
 
 

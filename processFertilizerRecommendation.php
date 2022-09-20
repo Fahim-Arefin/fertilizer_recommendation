@@ -54,17 +54,32 @@ if (is_numeric($temperature) && is_numeric($humidity) && is_numeric($moisture)) 
                     header("Location: fertilizerResultPage.php");
                     exit;
                 } else {
-                    echo "No data found";
+                    // echo "No data found";
+                    $_SESSION['errorMessage'] = "Please input correct crop type for selected soil.This type of crop needs different soil to grow.";
+                    header("Location: FR_inputValidationError.php");
+                    exit;
                 }
             } else {
-                echo "please enter Moisture between '20 to 70' percent only";
+                // echo "please enter Moisture between '20 to 70' percent only";
+                $_SESSION['errorMessage'] = "Please enter moisture between '20 to 70' percent. All plants need to be in a specific soil moisture range — the majority of plants thrive in soil with a moisture level that ranges between 20% and 70%.";
+                header("Location: FR_inputValidationError.php");
+                exit;
             }
         } else {
-            echo "please enter Humidity between '40 to 70' percent only";
+            // echo "please enter Humidity between '40 to 70' percent only";
+            $_SESSION['errorMessage'] = "Please enter Humidity between '40 to 70' percent. An ideal humidity range for most mature plants is 40% to 70%.";
+            header("Location: FR_inputValidationError.php");
+            exit;
         }
     } else {
-        echo "please enter temparature between '20 to 45' degree only";
+        // echo "please enter temparature between '20 to 45' degree only";
+        $_SESSION['errorMessage'] = "Please enter temparature between '20 to 45' degree. Most plants tolerate normal temperature fluctuations. In general, foliage plants grow best between 20 degrees and 45 degrees celsius. ";
+        header("Location: FR_inputValidationError.php");
+        exit;
     }
 } else {
-    echo "please enter only Numeric value in the input fields";
+    // echo "please enter only Numeric value in the input fields";
+    $_SESSION['errorMessage'] = "please enter only Numeric value in the input fields";
+    header("Location: FR_inputValidationError.php");
+    exit;
 }

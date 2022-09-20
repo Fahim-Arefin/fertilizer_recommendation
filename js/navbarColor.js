@@ -12,6 +12,9 @@ for (let a of anchors) {
 if (href === 'fertilizerResultPage.php') {
     anchors[1].classList.add('active');
 }
+if (href === 'FR_inputValidationError.php') {
+    anchors[1].classList.add('active');
+}
 if (href === 'registration.php') {
     anchors[6].classList.add('active');
 }

@@ -1,0 +1,65 @@
+#horizontalImage{
+    width: 100%;
+    height: 400px;
+    background-image: url(../asset/image/18.jpg);
+    background-size: cover;
+    /* background-position: center; */
+    background-position: 20% 35%;
+    /* background-position: right 35% bottom 45%; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+#horizontalImage h1{
+    color: white;
+    font-size: 40px;
+    margin-left: 20%;
+}
+#info{
+    font-size: 25px;
+}
+#tabBar{
+    width: 60%;
+    height: 70px;
+    background-color: #4eae3a;
+    border-radius: 5px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+#errorSection{
+    width: 25%;
+    margin: 200px auto;
+    text-align: center;
+    /* background-color: aqua; */
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#errorSection h2{
+    color: red;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+#errorSection p{
+    color: #2f3e46;
+    /* color: #e71d36; */
+    margin-bottom: 25px;
+    margin-top: 25px;
+    padding: 0px 30px;
+}
+#errorSection a{
+    text-decoration: none;
+    /* background-color: #4361ee; */
+    background-color:#4eae3a ;
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 28px;
+    display: block;
+    width: 17%;
+    margin: 0px auto;
+    margin-bottom: 7px;
+}
